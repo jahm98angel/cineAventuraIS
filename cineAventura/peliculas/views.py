@@ -1076,7 +1076,7 @@ def importar_pelicula_tmdb(request, tmdb_id):
             clasificacion='PG-13'  # Valor por defecto
         )
         
-        # Asignar géneros
+        # Asignar género aventura
         for genre_name in datos_formateados['generos_nombres']:
             genero, _ = Genero.objects.get_or_create(nombre=genre_name)
             pelicula.generos.add(genero)

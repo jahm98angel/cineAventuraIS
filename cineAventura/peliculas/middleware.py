@@ -49,7 +49,7 @@ class TerminosMiddleware:
             # Verificar si tiene perfil
             try:
                 perfil = request.user.perfil
-                # Si no ha aceptado términos, redirigir a la página de términos
+                # Si no ha aceptado términos, redirigir a la página de términos y condiciones
                 if not perfil.aceptado_terminos and request.path != reverse('peliculas:terminos'):
                     pass
             except PerfilUsuario.DoesNotExist:

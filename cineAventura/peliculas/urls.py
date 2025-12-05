@@ -17,7 +17,7 @@ urlpatterns = [
     # Terminos y condiciones
     path('terminos/', views.terminos_condiciones, name='terminos'),
     
-    # Interacciones con pelÃ­culas
+    # Interacciones con pelí­culas
     path('pelicula/<int:pelicula_id>/calificar/', views.agregar_calificacion, name='agregar_calificacion'),
     path('pelicula/<int:pelicula_id>/resenar/', views.agregar_resena, name='agregar_resena'),
     path('pelicula/<int:pelicula_id>/favoritos/', views.agregar_favoritos, name='agregar_favoritos'),

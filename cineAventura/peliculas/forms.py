@@ -272,6 +272,7 @@ class PeliculaForm(forms.ModelForm):
             'clasificacion',
         ]
     
+    #Campo para limpiar año
     def clean_año(self):
         """Validar que el año sea razonable"""
         año = self.cleaned_data.get('año')
@@ -281,6 +282,7 @@ class PeliculaForm(forms.ModelForm):
             raise ValidationError('El año no puede ser mayor a 2030.')
         return año
     
+    #Campo para limpiar duracion
     def clean_duracion(self):
         """Validar que la duración sea razonable"""
         duracion = self.cleaned_data.get('duracion')
