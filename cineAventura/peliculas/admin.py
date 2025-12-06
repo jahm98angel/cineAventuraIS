@@ -4,23 +4,27 @@ from .models import (
     Calificacion, Resena, ListaPersonalizada
 )
 
+# Administración de Genero
 @admin.register(Genero)
 class GeneroAdmin(admin.ModelAdmin):
     list_display = ['nombre', 'descripcion']
     search_fields = ['nombre']
 
+# Administración de Directores
 @admin.register(Director)
 class DirectorAdmin(admin.ModelAdmin):
     list_display = ['nombre', 'nacionalidad', 'fecha_nacimiento']
     search_fields = ['nombre', 'nacionalidad']
     list_filter = ['nacionalidad']
 
+# Administración de Actor
 @admin.register(Actor)
 class ActorAdmin(admin.ModelAdmin):
     list_display = ['nombre', 'nacionalidad', 'fecha_nacimiento']
     search_fields = ['nombre', 'nacionalidad']
     list_filter = ['nacionalidad']
 
+# Administración de Pelicula
 @admin.register(Pelicula)
 class PeliculaAdmin(admin.ModelAdmin):
     list_display = ['titulo', 'año', 'director', 'duracion', 'clasificacion', 'calificacion_promedio']
@@ -52,6 +56,7 @@ class PeliculaAdmin(admin.ModelAdmin):
         }),
     )
 
+# Administración de Calificación
 @admin.register(Calificacion)
 class CalificacionAdmin(admin.ModelAdmin):
     list_display = ['pelicula', 'usuario', 'puntuacion', 'fecha']
@@ -59,6 +64,7 @@ class CalificacionAdmin(admin.ModelAdmin):
     list_filter = ['puntuacion', 'fecha']
     date_hierarchy = 'fecha'
 
+# Administración de Reseña
 @admin.register(Resena)
 class ResenaAdmin(admin.ModelAdmin):
     list_display = ['titulo', 'pelicula', 'usuario', 'fecha', 'util_count']
@@ -67,6 +73,7 @@ class ResenaAdmin(admin.ModelAdmin):
     date_hierarchy = 'fecha'
     readonly_fields = ['fecha', 'actualizada']
 
+# Administración de Lista Personalizada
 @admin.register(ListaPersonalizada)
 class ListaPersonalizadaAdmin(admin.ModelAdmin):
     list_display = ['nombre', 'usuario', 'publica', 'fecha_creacion']
