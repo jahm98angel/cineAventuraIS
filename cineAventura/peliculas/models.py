@@ -7,12 +7,9 @@ from django.db.models import Q
 
 class Genero(models.Model):
     """
-    Modelo para los géneros cinematográficos.
-    
-    Representa categorías de películas como Acción, Drama, Comedia, etc.
-    Permite clasificar y filtrar películas por género.
+    Modelo para los géneros cinematográficos. Aventura
     """
-    # Nombre único del género (ej: "Acción", "Drama")
+    # Nombre único del género (ej: "Acción", "Aventura")
     nombre = models.CharField(max_length=50, unique=True)
     # Descripción opcional del género
     descripcion = models.TextField(blank=True)

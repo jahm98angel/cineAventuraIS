@@ -218,7 +218,7 @@ class TMDBService:
         }
 
 
-# Diccionario de mapeo de géneros TMDB a tus géneros locales
+# Diccionario de mapeo de géneros TMDB a nuestro genero aventura
 GENRE_MAPPING = {
     28: 'Acción',          # Action
     12: 'Aventura',        # Adventure
