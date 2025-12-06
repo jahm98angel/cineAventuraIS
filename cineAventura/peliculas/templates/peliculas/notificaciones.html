@@ -32,7 +32,7 @@
             <small>{{ notif.fecha_creacion|timesince }} atrás</small>
         </div>
         
-        {# Enlace de acción - Solo se muestra si la notificación tiene una URL asociada #}
+        {# Enlace de acción. Solo se muestra si la notificación tiene una URL asociada #}
         {% if notif.url %}
         <a href="{{ notif.url }}" class="notif-link">Ver →</a>
         {% endif %}
